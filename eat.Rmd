@@ -49,4 +49,13 @@ colPerc(table1)
 
 According to the numerical results, I can conclude that white people were eating out more than the other races in this dataset. There were around 83% of white people eating out, compared to 69% from the black and 72% from the other races.
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+```{r}
+fisherXY(mydata$race,mydata$eatout, printAll = TRUE)
+```
 
+According to the inferential data, I can conclude that there is a statistically significant difference between white and black, and white and other. This is due to their being a low p-value running the fisherXY test. Although, the fisherXY test concluded that there is no statistically significant difference between black and others, due to the p-value not being low.
