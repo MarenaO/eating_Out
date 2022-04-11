@@ -32,8 +32,14 @@ mydata <- select(GSS,race,age,eatout)
 mydata <- na.omit(mydata)
 ```
 
+```{r}
+barchartGC(~race + eatout,data=mydata)
+barchartGC(~race + eatout,data=mydata, type="percent")
+
+```
 
 
+According to the plot, I can conclude that out of white people, black people, and other people, the white people seem to be eating out the most.
 
 
 
