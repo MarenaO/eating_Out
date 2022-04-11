@@ -41,7 +41,12 @@ barchartGC(~race + eatout,data=mydata, type="percent")
 
 According to the plot, I can conclude that out of white people, black people, and other people, the white people seem to be eating out the most.
 
+```{r}
+table1 <- xtabs(~race + eatout, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
 
-
+According to the numerical results, I can conclude that white people were eating out more than the other races in this dataset. There were around 83% of white people eating out, compared to 69% from the black and 72% from the other races.
 
 
